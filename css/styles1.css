@@ -198,6 +198,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   background-color: var(--background-light-color);
+  margin-bottom: 50px;
 }
 
 footer>address>li {
@@ -419,9 +420,6 @@ header {
   padding-top: 0px;
 }
 
-.title-for-images2 {
-  margin-bottom: 50px;
-}
 
 .text-for-profilepics {
   padding-top: 94px;
@@ -894,4 +892,26 @@ header {
   margin-bottom: auto;
 }
 
-hii
+/*homework number 5 */
+.text-overlay {
+  display: flex;
+  justify-content: center;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.overlay-box {
+  /*
+  display: flex;
+  justify-content: center;
+  */
+  bottom: 70px;
+  position: relative;
+  max-height: max-content;
+  background: rgba(47, 48, 58, 0.8);
+}
