@@ -15,6 +15,13 @@ body {
   letter-spacing: 0.02em;
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
 * {
   text-decoration: none;
   padding: none;
@@ -913,26 +920,6 @@ header {
 
 /*homework number 5 */
 
-.form {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  /*
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-  */
-}
-
-.form::after {
-  overflow: visible;
-  clip-path: inset(0%);
-  width: 300px;
-}
 
 .modal {
   position: fixed;
@@ -949,11 +936,12 @@ header {
 
 .modal-head {
   padding: 10px 15px;
+  padding-bottom: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var(--primary-text-color);
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .modal-header-items {
@@ -964,35 +952,41 @@ header {
 
 .modal-body {
   padding: 10px 15px;
+
+
 }
 
 
 #overlay-modal {
-  /*
   position: fixed;
-  opacity: 0 top;
+  opacity: 0;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, .2);
   pointer-events: none;
-  */
+
 }
 
-/*
+
 #overlay-modal .active {
-  opasity: 1;
+  opacity: 1;
 }
 
 
-/* position: absolute;
- width: 1px;
- height: 1px;
- margin: -1px;
- border: 0;
- padding: 0;
- white-space: nowrap;
- clip-path: inset(100%);
- clip: rect(0 0 0 0);
- overflow: hidden;
- /
+
+.is-hidden {}
+
+.modal-button {
+  background-color: #ffffff;
+  border-style: none;
+  border-color: #2196f3;
+  padding: 5px;
+}
+
+.close-modal-button {
+  width: 20px;
+  height: 20px;
+
+}
