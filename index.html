@@ -27,9 +27,9 @@
 
                 <ul class="navigation-list-1">
 
-                    <li class="navigation-item">
+                    <li class="navigation-item ">
                         <a href="./index.html"
-                            class="header-navigation-link   header-navigation-link-current  ">Studio</a>
+                            class="header-navigation-link   header-navigation-link-current  aftereffect">Studio</a>
                     </li>
 
                     <li class="navigation-item">
@@ -87,10 +87,28 @@
 
                 <!-- class="hero-button-positioning"> -->
 
-                <button type="button" class="hero-button">Request Our Service</button>
+                <button class="hero-button" type="button" data-modal-open> Request Our Service</button>
+
+
+                <div class="modal active" id="modal">
+
+                    <div class="modal-head">
+
+                        <div class="modal-header-items">header</div>
+
+                        <button type="button" data-modal-close>Button</button>
+
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        </p>
+                    </div>
+                </div>
+
 
             </div>
-
+            <div data-modal id="overlay-modal"></div>
         </section>
 
         <section class="paragraphs-discription">

@@ -490,10 +490,6 @@ header {
   margin-right: 70px;
 }
 
-.navigation-item:not(:last-child) {
-  margin-right: 70px;
-}
-
 .navigation-item {
   display: block;
 }
@@ -617,8 +613,8 @@ header {
 .footer-logo-1 {
   display: block;
   margin-bottom: 10px;
-}
 
+}
 
 .footer-paddings-1 {
   padding-top: 60px;
@@ -916,3 +912,87 @@ header {
 }
 
 /*homework number 5 */
+
+.form {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  /*
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  */
+}
+
+.form::after {
+  overflow: visible;
+  clip-path: inset(0%);
+  width: 300px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 1);
+  width: 50%;
+  height: 50%;
+}
+
+.modal-head {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--primary-text-color);
+  /* justify-content: space-between; */
+}
+
+.modal-header-items {
+  font-size: 110%;
+  font-weight: bold;
+
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+
+#overlay-modal {
+  /*
+  position: fixed;
+  opacity: 0 top;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .2);
+  pointer-events: none;
+  */
+}
+
+/*
+#overlay-modal .active {
+  opasity: 1;
+}
+
+
+/* position: absolute;
+ width: 1px;
+ height: 1px;
+ margin: -1px;
+ border: 0;
+ padding: 0;
+ white-space: nowrap;
+ clip-path: inset(100%);
+ clip: rect(0 0 0 0);
+ overflow: hidden;
+ /
