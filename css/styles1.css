@@ -560,6 +560,7 @@ header {
   margin-right: 30px;
   border-bottom: 1px solid #eeeeee;
 
+  /*overflow: hidden;*/
 }
 
 .computerimg1-9-same:hover {
@@ -935,7 +936,7 @@ header {
 }
 
 .modal-head {
-  padding: 10px 15px;
+
   padding-bottom: 0px;
   display: flex;
   align-items: center;
@@ -982,11 +983,47 @@ header {
   background-color: #ffffff;
   border-style: none;
   border-color: #2196f3;
-  padding: 5px;
+  padding: 10px;
+  border: #212121;
+  border-radius: 10px;
+  ;
 }
 
 .close-modal-button {
   width: 20px;
   height: 20px;
 
+}
+
+.overflow-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translatex(100%);
+  transform: translatey(100%);
+  transition: transform 250ms;
+  transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.computerimg1-9-same:hover .overflow-text {
+  transform: translatex(0);
+}
+
+.computerimg1-9-same {
+  position: relative;
+  overflow: hidden;
+}
+
+.show-overflow:hover {
+  overflow-inline: 2;
+}
+
+.profile-pic-spaces-p-2 {
+  overflow: hidden;
+  z-index: 5;
+  position: relative;
 }
