@@ -19,7 +19,7 @@
 
     <header class="header-section">
         <div class="container header-container">
-            <nav class="header-navigation-link">
+            <nav class="header-navigation-control">
                 <!--Top bar -->
 
                 <a href="./index.html" class="logo  header-logo ">WebStudio
@@ -29,7 +29,7 @@
 
                     <li class="navigation-item ">
                         <a href="./index.html"
-                            class="header-navigation-link   header-navigation-link-current  aftereffect">Studio</a>
+                            class="header-navigation-link   header-navigation-link-current  ">Studio</a>
                     </li>
 
                     <li class="navigation-item">
@@ -93,37 +93,47 @@
 
                 </button>
 
+                <div class="backdrop is-hidden" data-modal>
 
-                <div class="modal is-hidden" id="modal" data-modal>
+                    <div class="modal" id="modal">
 
-                    <div class="modal-head">
-
-                        <div class="modal-header-items">header</div>
-
-                        <button class="modal-button" type="button" data-modal-close>
+                        <div class="modal-head">
 
 
 
-                            <svg class="close-modal-button">
+                            <div class="modal-header-items">header</div>
 
-                                <use href="./images/sprite.svg#icon-close-button">
+                            <button class="modal-button" type="button" data-modal-close>
 
-                                </use>
-                            </svg>
+                                <svg class="close-modal-button" width="15px" height="15px">
 
-                        </button>
+                                    <use href="./images/sprite.svg#icon-close-button">
 
-                    </div>
+                                    </use>
+                                </svg>
 
-                    <div class="modal-body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
-                        </p>
+                            </button>
+
+                        </div>
+
+
+                        <div class="modal-body">
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                        </div>
+
+
+
                     </div>
                 </div>
 
 
+
+
+
             </div>
-            <div id="overlay-modal" class="is-hidden"></div>
+
         </section>
 
         <section class="paragraphs-discription">
