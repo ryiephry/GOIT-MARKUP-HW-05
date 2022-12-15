@@ -709,12 +709,14 @@ header {
   position: relative;
 }
 
+/*
 .icons-for-profilepics:hover {
-  /* background-color: #2196F3;*/
+   background-color: #2196F3;
   color: #FFFFFF;
   z-index: 3;
   transform: scaleX(1);
 }
+*/
 
 .icon-space:hover {
   background-color: #152735
@@ -855,6 +857,25 @@ header {
   color: #AFB1B8;
   cursor: pointer;
   z-index: 3;
+  position: relative;
+}
+
+.icons-for-profilepic {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 50%;
+  position: relative;
+  transition-duration: 250ms;
+}
+
+.icons-for-profilepics:hover {
+
+  background-color: #2196F3;
+  color: #FFFFFF;
+  transition-duration: 250ms;
 }
 
 .icons-for-profilepics::after {
@@ -864,26 +885,17 @@ header {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #2196F3;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-duration: 0s;
   transition-duration: 250ms;
-  border-radius: 23px;
-  z-index: -1;
-  transition: ease-in;
-}
-
-.socialmedia {
-  z-index: 5;
+  z-index: -1px;
 }
 
 .icons-for-profilepics:hover::after {
-  content: "";
-  z-index: 3;
-  transform: scaleX(1);
-  transform: scaleX(1);
+  z-index: 5;
+}
+
+.socialmedia {
+  z-index: 7;
+
 }
 
 .footer-color-fill {
