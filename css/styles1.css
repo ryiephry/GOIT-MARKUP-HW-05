@@ -704,12 +704,16 @@ header {
 .icons-for-profilepics {
   display: flex;
   justify-content: center;
-
+  padding: 12px;
+  border-radius: 50%;
+  position: relative;
 }
 
 .icons-for-profilepics:hover {
-  background-color: #2196F3;
+  /* background-color: #2196F3;*/
   color: #FFFFFF;
+  z-index: 3;
+  transform: scaleX(1);
 }
 
 .icon-space:hover {
@@ -847,28 +851,44 @@ header {
 
 .-svg-social-profile {
   margin: auto;
-  padding: 12px;
   border-radius: 24px;
   color: #AFB1B8;
   cursor: pointer;
+  z-index: 3;
+}
+
+.icons-for-profilepics::after {
+  content: "";
   transform-origin: left;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   transition-duration: 250ms;
-  transform: scaleX(1);
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.-svg-social-profile:hover {
+  transform: scaleX(0);
+  transform: scaley(0);
   padding: 12px;
   background-color: #2196F3;
   color: #ffffff;
   border-radius: 24px;
-  transform: scaley(1);
+  z-index: -1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.socialmedia {
+  z-index: 5;
+}
+
+.icons-for-profilepics:hover::after {
+  content: "";
+  z-index: 3;
   transform: scaleX(1);
-  z-index: 2;
+  transform: scaleX(1);
+}
+
+.footer-color-fill {
+  z-index: 3;
 }
 
 
@@ -892,16 +912,39 @@ header {
   padding: 12px;
   display: flex;
   color: #FFFFFF;
-
+  position: relative;
 }
 
+.footer-4-social::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 23px;
+  transform-origin: left;
+  transition-duration: 250ms;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #2196F3;
+  transform: scaleX(0);
+  z-index: -1;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.footer-4-social:hover::after {
+  content: "";
+  transform: scaleX(1);
+  z-index: 2;
+}
+
+/*
 .footer-4-social:hover,
 .footer-4-social:focus {
-  color: #ffffff;
-  background-color: #2196F3;
-  border-radius: 30px;
 }
-
+*/
 .footer-icons {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 30px;
@@ -1066,6 +1109,7 @@ header {
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   transition-duration: 250ms;
   border-radius: 2px;
+  transition-property: all;
 }
 
 .header-navigation-link:hover::after {
@@ -1126,6 +1170,7 @@ header {
   transition-duration: 250ms;
   border-radius: 4px;
   z-index: -1;
+
 }
 
 .hero-button:hover::before,
@@ -1142,55 +1187,34 @@ header {
   justify-content: center;
 }
 
-
+/*
 .svg-profile-flex {
   position: relative;
 }
 
-/*
-.-svg-social-profile::before {
+.hhhhhhhh::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: scaleX(0);
   transform-origin: left;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-duration: 250ms;
-  border-radius: 4px;
-  border-right: 10px solid black;
-}
-
-.-svg-social-profile {
-  z-index: 1;
-}
-
-.-svg-social-profile:hover::before {
-  transform: scaleX(1);
-  z-index: 1;
-}
-*/
-/*
-.icons-for-profilepics::after {
-  content: "";
-  position: absolute;
-  top: 0;
+  transition-duration: 2500ms;
+  transform: scaleX(0);
   right: 0;
   bottom: 0;
   left: 0;
-  transform: scalex(0);
+  top: 0;
+  z-index: 1;
   background-color: #2196F3;
-  width: 50px;
+
 }
 
-.icons-for-profilepics:hover::after {
-  transform: scalex(1);
+.icons-for-profilepics {
+  z-index: 2;
+  position: absolute;
 }
 
-.texting-facebook {
-  position: relative;
-  display: flex;
+.hhhhhhhh:hover::after {
+  transform: scaleX(1);
+  z-index: 1;
 }
 */
