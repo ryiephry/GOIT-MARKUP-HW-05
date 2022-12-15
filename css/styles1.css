@@ -851,7 +851,14 @@ header {
   border-radius: 24px;
   color: #AFB1B8;
   cursor: pointer;
-
+  transform-origin: left;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 250ms;
+  transform: scaleX(1);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .-svg-social-profile:hover {
@@ -859,7 +866,11 @@ header {
   background-color: #2196F3;
   color: #ffffff;
   border-radius: 24px;
+  transform: scaley(1);
+  transform: scaleX(1);
+  z-index: 2;
 }
+
 
 .header-svg:hover {
   fill: currentColor;
@@ -994,7 +1005,6 @@ header {
   height: 20px;
 
 }
-
 
 .overflow-text {
   position: absolute;
@@ -1132,7 +1142,55 @@ header {
   justify-content: center;
 }
 
-.icons-for-profilepics::before {
-  content: "";
 
+.svg-profile-flex {
+  position: relative;
 }
+
+/*
+.-svg-social-profile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 250ms;
+  border-radius: 4px;
+  border-right: 10px solid black;
+}
+
+.-svg-social-profile {
+  z-index: 1;
+}
+
+.-svg-social-profile:hover::before {
+  transform: scaleX(1);
+  z-index: 1;
+}
+*/
+/*
+.icons-for-profilepics::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scalex(0);
+  background-color: #2196F3;
+  width: 50px;
+}
+
+.icons-for-profilepics:hover::after {
+  transform: scalex(1);
+}
+
+.texting-facebook {
+  position: relative;
+  display: flex;
+}
+*/
