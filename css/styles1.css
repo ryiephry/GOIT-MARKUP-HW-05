@@ -108,6 +108,7 @@ img {
   padding: 10px 20px;
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 
 .text-for-profilepics>ul li {
@@ -304,11 +305,20 @@ header {
   border: none;
   cursor: pointer;
   padding: 10px 25px;
+  position: relative;
+  transition-duration: 250ms;
+  transition-delay: cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: var(--primary-text-color);
+  z-index: 10;
 }
 
-.all-buttons>button:hover {
+.all-buttons>button:hover,
+.all-buttons>button:focus {
+  /* can change color to make the fade color in*/
   color: var(--white-color);
-  background-color: var(--accent-color);
+  background-color: #2196f3;
+  z-index: 5;
+  /* background-color: var(--accent-color); */
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
 }
 
@@ -851,9 +861,8 @@ header {
   position: relative;
 }
 
-.icons-for-profilepic {
+.icons-for-profilepics {
   position: relative;
-
   display: flex;
   justify-content: center;
   padding: 12px;
@@ -862,14 +871,10 @@ header {
   transition-duration: 250ms;
 }
 
-.icons-for-profilepics:hover {
-
+.icons-for-profilepics:hover,
+.icons-for-profilepics:focus {
   background-color: #2196F3;
   color: #FFFFFF;
-  transition-duration: 250ms;
-}
-
-.icons-for-profilepics {
   transition-duration: 250ms;
 }
 
@@ -913,23 +918,15 @@ header {
   color: #2196F3;
 }
 
-
-
 .footer-4-social {
   padding: 12px;
   display: flex;
   color: #FFFFFF;
   position: relative;
   transition-duration: 250ms;
+  border-radius: 50%;
 }
 
-
-
-
-.footer-4-social:hover::before {
-  z-index: 5;
-  transform: translatex(1);
-}
 
 .footer-icons {
   background-color: rgba(255, 255, 255, 0.1);
@@ -941,9 +938,8 @@ header {
   border-radius: 50%;
 }
 
-.footer-4-social:hover::before {
+.footer-4-social:hover::before .footer-4-social:focus::before {
   z-index: 5;
-  transform: translatex(1);
 }
 
 .footer-4-social::before {
@@ -960,21 +956,17 @@ header {
   border-radius: 23px;
 }
 
-.footer-4-social:hover {
+.footer-4-social:hover,
+.footer-4-social:focus {
   border-radius: 23px;
   background-color: #2196F3;
   color: #FFFFFF;
   transition-duration: 250ms;
 }
 
-
-
-
-
-
-.regular-custumers-0-6:hover {
+.regular-custumers-0-6:hover,
+.regular-custumers-0-6:focus {
   color: #2f303a;
-
 }
 
 .r-g-6::before {
@@ -991,18 +983,15 @@ header {
   color: #2196F3;
 }
 
-.r-g-6:hover {
-  color: #2196F3;
-
-}
-
 .r-g-6:hover::before {
   content: "";
   z-index: 5;
 }
 
-.r-g-6:hover {
+.r-g-6:hover,
+.r-g-6:focus {
   transition-duration: 250ms;
+  color: #2196F3;
 }
 
 .r-g-6 {
@@ -1050,7 +1039,7 @@ header {
 .modal-header-items {
   font-size: 110%;
   font-weight: bold;
-
+  position: relative;
 }
 
 .modal-body {
@@ -1087,15 +1076,56 @@ header {
   border-color: #2196f3;
   padding: 10px;
   border: #212121;
-  border-radius: 25px;
+  border-radius: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: 250ms;
+  border-radius: 50%;
+  margin: 2px;
+  transition: 250ms;
+
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  background-color: #2196F3;
+  color: #FFFFFF;
+  transition-duration: 250ms;
+  z-index: 3;
+}
+
+.modal-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition-duration: 250ms;
+  z-index: -1px;
+  transform: translatex(0);
+}
+
+
+.modal-button:hover::before,
+.modal-button:focus::before {
+  transform: translateX(1);
+  z-index: 2;
 }
 
 .close-modal-button {
   width: 20px;
   height: 20px;
+  z-index: 3;
+  color: #000000;
+  color: currentColor;
+}
+
+.close-modal-button:hover {
+  color: var(--white-color);
 
 }
 
@@ -1228,43 +1258,71 @@ header {
   transform: scaleX(1);
 }
 
-.hero-button {
-  z-index: 2;
-}
 
 .div-hero-main {
   display: flex;
   justify-content: center;
 }
 
-/*
-.svg-profile-flex {
-  position: relative;
-}
+/* buttonsssss*/
 
-.hhhhhhhh::after {
+
+.all-buttons::before {
   content: "";
   position: absolute;
-  transform-origin: left;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-duration: 2500ms;
-  transform: scaleX(0);
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  top: 0;
-  z-index: 1;
-  background-color: #2196F3;
-
+  display: block;
+  transform-origin: left;
+  transition-duration: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  background: #2196F3;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  border-radius: 4px;
 }
 
-.icons-for-profilepics {
-  z-index: 2;
-  position: absolute;
-}
-
-.hhhhhhhh:hover::after {
-  transform: scaleX(1);
-  z-index: 1;
+/*
+.left-to-right-button:hover {
+  color: #ECECEC;
+  z-index: 15;
+  transform: scaleX(1)
 }
 */
+/*
+.all-buttons button#text:hover {
+  color: #AFB1B8;
+  z-index: 10;
+}
+*/
+
+.all-buttons:hover::before {
+  z-index: 1;
+  transform: scaleX(1)
+}
+
+.left-to-right-button {
+  color: var(--white-color);
+  z-index: 5;
+  position: relative;
+}
+
+.button-positioning-list-2:hover,
+.button-positioning-list-2:focus {
+  z-index: 5;
+  color: var(--white-color);
+  transform: scaleX(1)
+}
+
+.all-buttons button {
+  position: relative;
+
+  z-index: 5;
+}
+
+.all-buttons {
+  position: relative;
+}
