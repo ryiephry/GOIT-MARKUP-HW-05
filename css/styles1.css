@@ -59,6 +59,7 @@ img {
   padding-top: 32px;
   padding-bottom: 30px;
   position: relative;
+  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1)
 }
 
 .header-navigation-link:hover,
@@ -79,6 +80,7 @@ img {
   display: flex;
   align-items: center;
   color: var(--secondary-text-color);
+  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .header-svg {
@@ -124,7 +126,6 @@ img {
 .hero-button:hover,
 .hero-button:focus {
   color: rgb(255, 255, 255);
-  /*background-color: var(--background-dark-color);*/
 }
 
 .hero-titles {
@@ -535,13 +536,13 @@ header {
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
+  position: relative;
+  z-index: 5;
 }
 
 .button-positioning-list-2:not(:last-child) {
   margin-right: 8px;
 }
-
-
 
 .the-9-images {
   display: flex;
@@ -555,7 +556,6 @@ header {
 
 .paragraphs2 {
   margin-top: 0px;
-
 }
 
 .computerimg1-9-same {
@@ -567,7 +567,6 @@ header {
   border-bottom: 1px solid #eeeeee;
   position: relative;
   overflow: hidden;
-
 }
 
 .computerimg1-9-same:hover {
@@ -719,17 +718,8 @@ header {
   border-radius: 50%;
   position: relative;
   transition-duration: 250ms;
-  /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/*
-.icons-for-profilepics:hover {
-   background-color: #2196F3;
-  color: #FFFFFF;
-  z-index: 3;
-  transform: scaleX(1);
-}
-*/
 
 .icon-space:hover {
   background-color: #152735
@@ -784,6 +774,7 @@ header {
   color: currentColor;
   color: #2196F3;
   position: relative;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .regular-custumers-0-6:not(:last-child) {
@@ -871,6 +862,7 @@ header {
   color: #FFFFFF;
 }
 
+/*
 .icons-for-profilepics::before {
   content: "";
   position: absolute;
@@ -887,7 +879,7 @@ header {
   z-index: 5;
   transform: translatex(1);
 }
-
+*/
 .socialmedia {
   z-index: 7;
 }
@@ -918,6 +910,7 @@ header {
   position: relative;
   transition-duration: 250ms;
   border-radius: 50%;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -935,6 +928,7 @@ header {
   z-index: 5;
 }
 
+/*
 .footer-4-social::before {
   content: "";
   position: absolute;
@@ -948,13 +942,12 @@ header {
   transform-origin: 20%;
   border-radius: 23px;
 }
-
+*/
 .footer-4-social:hover,
 .footer-4-social:focus {
   border-radius: 23px;
   background-color: #2196F3;
   color: #FFFFFF;
-  transition-duration: 250ms;
 }
 
 .regular-custumers-0-6:hover,
@@ -962,28 +955,8 @@ header {
   color: #2f303a;
 }
 
-.r-g-6::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  transition-duration: 250ms;
-  z-index: -1px;
-  transform: translatex(0);
-  color: #2196F3;
-}
-
-.r-g-6:hover::before {
-  content: "";
-  z-index: 5;
-}
-
 .r-g-6:hover,
 .r-g-6:focus {
-  transition-duration: 250ms;
   color: #2196F3;
 }
 
@@ -993,7 +966,7 @@ header {
   justify-content: center;
   display: flex;
   position: relative;
-  transition-duration: 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 1s ease;
 }
 
 .fill-current-color {
@@ -1270,29 +1243,9 @@ header {
   border-radius: 4px;
 }
 
-/*
-.left-to-right-button:hover {
-  color: #ECECEC;
-  z-index: 15;
-  transform: scaleX(1)
-}
-*/
-/*
-.all-buttons button#text:hover {
-  color: #AFB1B8;
-  z-index: 10;
-}
-*/
-
 .all-buttons:hover::before {
   z-index: 1;
   transform: scaleX(1)
-}
-
-.left-to-right-button {
-  color: var(--white-color);
-  z-index: 5;
-  position: relative;
 }
 
 .button-positioning-list-2:hover,
@@ -1302,11 +1255,6 @@ header {
   transform: scaleX(1)
 }
 
-.all-buttons button {
-  position: relative;
-
-  z-index: 5;
-}
 
 .all-buttons {
   position: relative;
